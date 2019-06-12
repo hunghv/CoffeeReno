@@ -1,0 +1,12 @@
+F:\My projects\CoffeeReno\CoffeeReno\Services\bin\Debug\netstandard2.0\Services.deps.json
+F:\My projects\CoffeeReno\CoffeeReno\Services\bin\Debug\netstandard2.0\Services.dll
+F:\My projects\CoffeeReno\CoffeeReno\Services\bin\Debug\netstandard2.0\Services.pdb
+F:\My projects\CoffeeReno\CoffeeReno\Services\bin\Debug\netstandard2.0\Data.dll
+F:\My projects\CoffeeReno\CoffeeReno\Services\bin\Debug\netstandard2.0\Data.pdb
+F:\My projects\CoffeeReno\CoffeeReno\Services\obj\Debug\netstandard2.0\Services.csprojAssemblyReference.cache
+F:\My projects\CoffeeReno\CoffeeReno\Services\obj\Debug\netstandard2.0\Services.csproj.CoreCompileInputs.cache
+F:\My projects\CoffeeReno\CoffeeReno\Services\obj\Debug\netstandard2.0\Services.AssemblyInfoInputs.cache
+F:\My projects\CoffeeReno\CoffeeReno\Services\obj\Debug\netstandard2.0\Services.AssemblyInfo.cs
+F:\My projects\CoffeeReno\CoffeeReno\Services\obj\Debug\netstandard2.0\Services.csproj.CopyComplete
+F:\My projects\CoffeeReno\CoffeeReno\Services\obj\Debug\netstandard2.0\Services.dll
+F:\My projects\CoffeeReno\CoffeeReno\Services\obj\Debug\netstandard2.0\Services.pdb

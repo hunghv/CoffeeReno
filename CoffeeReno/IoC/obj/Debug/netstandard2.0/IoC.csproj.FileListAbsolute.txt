@@ -1,0 +1,14 @@
+F:\My projects\CoffeeReno\CoffeeReno\IoC\obj\Debug\netstandard2.0\IoC.csprojAssemblyReference.cache
+F:\My projects\CoffeeReno\CoffeeReno\IoC\obj\Debug\netstandard2.0\IoC.csproj.CoreCompileInputs.cache
+F:\My projects\CoffeeReno\CoffeeReno\IoC\obj\Debug\netstandard2.0\IoC.AssemblyInfoInputs.cache
+F:\My projects\CoffeeReno\CoffeeReno\IoC\obj\Debug\netstandard2.0\IoC.AssemblyInfo.cs
+F:\My projects\CoffeeReno\CoffeeReno\IoC\bin\Debug\netstandard2.0\IoC.deps.json
+F:\My projects\CoffeeReno\CoffeeReno\IoC\bin\Debug\netstandard2.0\IoC.dll
+F:\My projects\CoffeeReno\CoffeeReno\IoC\bin\Debug\netstandard2.0\IoC.pdb
+F:\My projects\CoffeeReno\CoffeeReno\IoC\bin\Debug\netstandard2.0\Data.dll
+F:\My projects\CoffeeReno\CoffeeReno\IoC\bin\Debug\netstandard2.0\Services.dll
+F:\My projects\CoffeeReno\CoffeeReno\IoC\bin\Debug\netstandard2.0\Data.pdb
+F:\My projects\CoffeeReno\CoffeeReno\IoC\bin\Debug\netstandard2.0\Services.pdb
+F:\My projects\CoffeeReno\CoffeeReno\IoC\obj\Debug\netstandard2.0\IoC.csproj.CopyComplete
+F:\My projects\CoffeeReno\CoffeeReno\IoC\obj\Debug\netstandard2.0\IoC.dll
+F:\My projects\CoffeeReno\CoffeeReno\IoC\obj\Debug\netstandard2.0\IoC.pdb
