@@ -52,7 +52,6 @@ namespace Data.Entities
 
         public ICollection<UserRole> UserRoles { get; set; }
     }
-
     public class UserLoginHistory : Entity
     {
         public int UserId { get; set; }
