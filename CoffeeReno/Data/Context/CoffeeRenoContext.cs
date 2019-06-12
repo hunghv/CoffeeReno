@@ -20,7 +20,7 @@ namespace Data.Context
             modelBuilder.Entity<UserLoginHistory>().ToTable("UserLoginHistory");
             modelBuilder.Entity<UserProfile>().ToTable("UserProfile");
             modelBuilder.Entity<UserRole>().ToTable("UserRole");
-            modelBuilder.Entity<Role>().ToTable("UserRole");
+            modelBuilder.Entity<Role>().ToTable("Role");
         }
     }
 }

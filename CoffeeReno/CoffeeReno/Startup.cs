@@ -1,4 +1,5 @@
 ﻿using CoffeeReno.Configuration;
+using IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -19,6 +20,7 @@ namespace CoffeeReno
         public void ConfigureServices(IServiceCollection services)
         {
             ConfigureService.InitServices(services, Configuration);
+            ComponentRegistrar.InitComponent(services);
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)

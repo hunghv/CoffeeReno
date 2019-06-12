@@ -2,6 +2,8 @@
 using Data.Repository.Implementation;
 using Data.Repository.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
+using Services.Interfaces;
+using Services.Services;
 
 namespace IoC
 {
@@ -14,6 +16,7 @@ namespace IoC
             services.AddScoped(typeof(IUserProfileRepository), typeof(UserProfileRepository));
             services.AddScoped(typeof(IRoleRepository), typeof(RoleRepository));
             services.AddScoped(typeof(IUserRoleRepository), typeof(UserRoleRepository));
+            services.AddScoped(typeof(IAdminServices), typeof(AdminServices));
         }
     }
 }
