@@ -26,6 +26,7 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "6.1.1",
           "Data": "1.0.0",
+          "IoC": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.Extensions.Logging.Log4Net.AspNetCore": "2.2.11",
@@ -537,6 +538,18 @@
         },
         "compile": {
           "Data.dll": {}
+        }
+      },
+      "IoC/1.0.0": {
+        "dependencies": {
+          "Data": "1.0.0",
+          "Services": "1.0.0"
+        },
+        "runtime": {
+          "IoC.dll": {}
+        },
+        "compile": {
+          "IoC.dll": {}
         }
       },
       "Services/1.0.0": {
@@ -3944,6 +3957,11 @@
       "hashPath": "system.threading.timer.4.0.1.nupkg.sha512"
     },
     "Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IoC/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
