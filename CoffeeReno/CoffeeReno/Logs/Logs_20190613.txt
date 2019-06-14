@@ -30,3 +30,79 @@ INFO  13-33-2019 18:33:45 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware 
 INFO  13-33-2019 18:33:45 Microsoft.AspNetCore.Hosting.Internal.WebHost [9] - Request finished in 125.3609ms 200 application/javascript 
 INFO  13-33-2019 18:33:45 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [14] - Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'C:\Git\CoffeeReno\CoffeeReno\CoffeeReno\wwwroot\lib\jquery\dist\jquery.js' 
 INFO  13-33-2019 18:33:45 Microsoft.AspNetCore.Hosting.Internal.WebHost [14] - Request finished in 115.8564ms 200 application/javascript 
+INFO  13-55-2019 18:55:04 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET https://localhost:44381/   
+INFO  13-55-2019 18:55:04 Microsoft.AspNetCore.Routing.EndpointMiddleware [7] - Executing endpoint 'CoffeeReno.Controllers.HomeController.Index (CoffeeReno)' 
+INFO  13-55-2019 18:55:04 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller CoffeeReno.Controllers.HomeController (CoffeeReno). 
+INFO  13-55-2019 18:55:04 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [7] - Executing action method CoffeeReno.Controllers.HomeController.Index (CoffeeReno) - Validation state: Valid 
+INFO  13-55-2019 18:55:04 Microsoft.EntityFrameworkCore.Infrastructure [7] - Entity Framework Core 2.2.4-servicing-10062 initialized 'CoffeeRenoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 0.0 MySql  
+INFO  13-55-2019 18:55:08 Microsoft.EntityFrameworkCore.Database.Command [6] - Executed DbCommand (314ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 50), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime), @p6='?' (Size = 255), @p7='?' (Size = 4000), @p8='?' (Size = 100), @p9='?' (DbType = Boolean), @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime), @p12='?' (Size = 50), @p13='?' (Size = 50), @p14='?' (DbType = Boolean), @p15='?' (Size = 30), @p16='?' (Size = 8000) (DbType = Binary), @p17='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `UserProfile` (`Active`, `ConfirmPassword`, `CreatedBy`, `CreatedDate`, `DeletedBy`, `DeletedDate`, `DisplayName`, `Domain`, `Email`, `IsDeleted`, `ModifiedBy`, `ModifiedDate`, `NickName`, `Password`, `ReceiveEmail`, `TelephoneNumber`, `ThumbnailPhoto`, `UserName`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);
+SELECT `Id`
+FROM `UserProfile`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID(); 
+INFO  13-55-2019 18:55:08 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action method CoffeeReno.Controllers.HomeController.Index (CoffeeReno), returned result Microsoft.AspNetCore.Mvc.ViewResult in 4038.1396ms. 
+INFO  13-55-2019 18:55:08 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [6] - Executing ViewResult, running view Index. 
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [6] - Executed ViewResult - view Index executed in 296.4441ms. 
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executed action CoffeeReno.Controllers.HomeController.Index (CoffeeReno) in 4671.0642ms 
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.Routing.EndpointMiddleware [6] - Executed endpoint 'CoffeeReno.Controllers.HomeController.Index (CoffeeReno)' 
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request finished in 4774.6513ms 200 text/html; charset=utf-8 
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request starting HTTP/1.1 GET https://localhost:44381/lib/bootstrap/dist/css/bootstrap.css   
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request starting HTTP/1.1 GET https://localhost:44381/lib/jquery/dist/jquery.js   
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.Hosting.Internal.WebHost [13] - Request starting HTTP/1.1 GET https://localhost:44381/css/site.css   
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request starting HTTP/1.1 GET https://localhost:44381/lib/bootstrap/dist/js/bootstrap.bundle.js   
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request starting HTTP/1.1 GET https://localhost:44381/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0   
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [10] - The file /js/site.js was not modified 
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [7] - The file /lib/bootstrap/dist/css/bootstrap.css was not modified 
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [13] - The file /css/site.css was not modified 
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [11] - The file /lib/jquery/dist/jquery.js was not modified 
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [8] - The file /lib/bootstrap/dist/js/bootstrap.bundle.js was not modified 
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.Hosting.Internal.WebHost [11] - Request finished in 33.3001ms 304 application/javascript 
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.Hosting.Internal.WebHost [13] - Request finished in 31.9167ms 304 text/css 
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.Hosting.Internal.WebHost [7] - Request finished in 51.2835ms 304 text/css 
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.Hosting.Internal.WebHost [10] - Request finished in 29.2908ms 304 application/javascript 
+INFO  13-55-2019 18:55:09 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request finished in 30.5191ms 304 application/javascript 
+INFO  13-55-2019 18:55:30 Microsoft.AspNetCore.Hosting.Internal.WebHost [8] - Request starting HTTP/1.1 GET https://localhost:44381/   
+INFO  13-55-2019 18:55:30 Microsoft.AspNetCore.Routing.EndpointMiddleware [8] - Executing endpoint 'CoffeeReno.Controllers.HomeController.Index (CoffeeReno)' 
+INFO  13-55-2019 18:55:30 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [8] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller CoffeeReno.Controllers.HomeController (CoffeeReno). 
+INFO  13-55-2019 18:55:30 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [8] - Executing action method CoffeeReno.Controllers.HomeController.Index (CoffeeReno) - Validation state: Valid 
+INFO  13-55-2019 18:55:30 Microsoft.EntityFrameworkCore.Infrastructure [8] - Entity Framework Core 2.2.4-servicing-10062 initialized 'CoffeeRenoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 0.0 MySql  
+INFO  13-55-2019 18:55:31 Microsoft.EntityFrameworkCore.Database.Command [20] - Executed DbCommand (277ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 50), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime), @p6='?' (Size = 255), @p7='?' (Size = 4000), @p8='?' (Size = 100), @p9='?' (DbType = Boolean), @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime), @p12='?' (Size = 50), @p13='?' (Size = 50), @p14='?' (DbType = Boolean), @p15='?' (Size = 30), @p16='?' (Size = 8000) (DbType = Binary), @p17='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `UserProfile` (`Active`, `ConfirmPassword`, `CreatedBy`, `CreatedDate`, `DeletedBy`, `DeletedDate`, `DisplayName`, `Domain`, `Email`, `IsDeleted`, `ModifiedBy`, `ModifiedDate`, `NickName`, `Password`, `ReceiveEmail`, `TelephoneNumber`, `ThumbnailPhoto`, `UserName`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);
+SELECT `Id`
+FROM `UserProfile`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID(); 
+INFO  13-55-2019 18:55:31 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [20] - Executed action method CoffeeReno.Controllers.HomeController.Index (CoffeeReno), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1565.572ms. 
+INFO  13-55-2019 18:55:31 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [20] - Executing ViewResult, running view Index. 
+INFO  13-55-2019 18:55:31 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [20] - Executed ViewResult - view Index executed in 6.1502ms. 
+INFO  13-55-2019 18:55:31 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [20] - Executed action CoffeeReno.Controllers.HomeController.Index (CoffeeReno) in 1573.4623ms 
+INFO  13-55-2019 18:55:31 Microsoft.AspNetCore.Routing.EndpointMiddleware [20] - Executed endpoint 'CoffeeReno.Controllers.HomeController.Index (CoffeeReno)' 
+INFO  13-55-2019 18:55:31 Microsoft.AspNetCore.Hosting.Internal.WebHost [20] - Request finished in 1574.8127ms 200 text/html; charset=utf-8 
+INFO  13-55-2019 18:55:32 Microsoft.AspNetCore.Hosting.Internal.WebHost [18] - Request starting HTTP/1.1 GET https://localhost:44381/Home/Privacy   
+INFO  13-55-2019 18:55:32 Microsoft.AspNetCore.Routing.EndpointMiddleware [18] - Executing endpoint 'CoffeeReno.Controllers.HomeController.Privacy (CoffeeReno)' 
+INFO  13-55-2019 18:55:32 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [18] - Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller CoffeeReno.Controllers.HomeController (CoffeeReno). 
+INFO  13-55-2019 18:55:32 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [18] - Executing action method CoffeeReno.Controllers.HomeController.Privacy (CoffeeReno) - Validation state: Valid 
+INFO  13-55-2019 18:55:32 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [18] - Executed action method CoffeeReno.Controllers.HomeController.Privacy (CoffeeReno), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.1516ms. 
+INFO  13-55-2019 18:55:32 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [18] - Executing ViewResult, running view Privacy. 
+INFO  13-55-2019 18:55:32 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [18] - Executed ViewResult - view Privacy executed in 15.2368ms. 
+INFO  13-55-2019 18:55:32 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [18] - Executed action CoffeeReno.Controllers.HomeController.Privacy (CoffeeReno) in 15.782ms 
+INFO  13-55-2019 18:55:32 Microsoft.AspNetCore.Routing.EndpointMiddleware [18] - Executed endpoint 'CoffeeReno.Controllers.HomeController.Privacy (CoffeeReno)' 
+INFO  13-55-2019 18:55:32 Microsoft.AspNetCore.Hosting.Internal.WebHost [18] - Request finished in 26.3017ms 200 text/html; charset=utf-8 
+INFO  13-55-2019 18:55:34 Microsoft.AspNetCore.Hosting.Internal.WebHost [19] - Request starting HTTP/1.1 GET https://localhost:44381/   
+INFO  13-55-2019 18:55:34 Microsoft.AspNetCore.Routing.EndpointMiddleware [19] - Executing endpoint 'CoffeeReno.Controllers.HomeController.Index (CoffeeReno)' 
+INFO  13-55-2019 18:55:34 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [19] - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller CoffeeReno.Controllers.HomeController (CoffeeReno). 
+INFO  13-55-2019 18:55:34 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [19] - Executing action method CoffeeReno.Controllers.HomeController.Index (CoffeeReno) - Validation state: Valid 
+INFO  13-55-2019 18:55:34 Microsoft.EntityFrameworkCore.Infrastructure [19] - Entity Framework Core 2.2.4-servicing-10062 initialized 'CoffeeRenoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 0.0 MySql  
+INFO  13-55-2019 18:55:35 Microsoft.EntityFrameworkCore.Database.Command [21] - Executed DbCommand (274ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 50), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime), @p6='?' (Size = 255), @p7='?' (Size = 4000), @p8='?' (Size = 100), @p9='?' (DbType = Boolean), @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime), @p12='?' (Size = 50), @p13='?' (Size = 50), @p14='?' (DbType = Boolean), @p15='?' (Size = 30), @p16='?' (Size = 8000) (DbType = Binary), @p17='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `UserProfile` (`Active`, `ConfirmPassword`, `CreatedBy`, `CreatedDate`, `DeletedBy`, `DeletedDate`, `DisplayName`, `Domain`, `Email`, `IsDeleted`, `ModifiedBy`, `ModifiedDate`, `NickName`, `Password`, `ReceiveEmail`, `TelephoneNumber`, `ThumbnailPhoto`, `UserName`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);
+SELECT `Id`
+FROM `UserProfile`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID(); 
+INFO  13-55-2019 18:55:36 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [21] - Executed action method CoffeeReno.Controllers.HomeController.Index (CoffeeReno), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1478.3789ms. 
+INFO  13-55-2019 18:55:36 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [21] - Executing ViewResult, running view Index. 
+INFO  13-55-2019 18:55:36 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [21] - Executed ViewResult - view Index executed in 2.2175ms. 
+INFO  13-55-2019 18:55:36 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [21] - Executed action CoffeeReno.Controllers.HomeController.Index (CoffeeReno) in 1481.266ms 
+INFO  13-55-2019 18:55:36 Microsoft.AspNetCore.Routing.EndpointMiddleware [21] - Executed endpoint 'CoffeeReno.Controllers.HomeController.Index (CoffeeReno)' 
+INFO  13-55-2019 18:55:36 Microsoft.AspNetCore.Hosting.Internal.WebHost [21] - Request finished in 1482.1439ms 200 text/html; charset=utf-8 
