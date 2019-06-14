@@ -14,6 +14,13 @@ namespace Data.Context
         public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<Role> Roles { get; set; }
 
+        public DbSet<AdsType> AdsTypes { get; set; }
+        public DbSet<AdsForm> AdsForms { get; set; }
+        public DbSet<Image> Images { get; set; }
+        public DbSet<PostType> PostTypes { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<PostImage> PostImages { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -21,6 +28,13 @@ namespace Data.Context
             modelBuilder.Entity<UserProfile>().ToTable("UserProfile");
             modelBuilder.Entity<UserRole>().ToTable("UserRole");
             modelBuilder.Entity<Role>().ToTable("Role");
+
+            modelBuilder.Entity<AdsType>().ToTable("AdsType");
+            modelBuilder.Entity<AdsForm>().ToTable("AdsForm");
+            modelBuilder.Entity<Image>().ToTable("Image");
+            modelBuilder.Entity<PostType>().ToTable("PostType");
+            modelBuilder.Entity<Post>().ToTable("Post");
+            modelBuilder.Entity<PostImage>().ToTable("PostImage");
         }
     }
 }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\My projects\\CoffeeReno\\CoffeeReno\\CoffeeReno\\CoffeeReno.csproj": {}
+    "C:\\Git\\CoffeeReno\\CoffeeReno\\CoffeeReno\\CoffeeReno.csproj": {}
   },
   "projects": {
-    "F:\\My projects\\CoffeeReno\\CoffeeReno\\CoffeeReno\\CoffeeReno.csproj": {
+    "C:\\Git\\CoffeeReno\\CoffeeReno\\CoffeeReno\\CoffeeReno.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\My projects\\CoffeeReno\\CoffeeReno\\CoffeeReno\\CoffeeReno.csproj",
+        "projectUniqueName": "C:\\Git\\CoffeeReno\\CoffeeReno\\CoffeeReno\\CoffeeReno.csproj",
         "projectName": "CoffeeReno",
-        "projectPath": "F:\\My projects\\CoffeeReno\\CoffeeReno\\CoffeeReno\\CoffeeReno.csproj",
-        "packagesPath": "C:\\Users\\hungh\\.nuget\\packages\\",
-        "outputPath": "F:\\My projects\\CoffeeReno\\CoffeeReno\\CoffeeReno\\obj\\",
+        "projectPath": "C:\\Git\\CoffeeReno\\CoffeeReno\\CoffeeReno\\CoffeeReno.csproj",
+        "packagesPath": "C:\\Users\\minhd\\.nuget\\packages\\",
+        "outputPath": "C:\\Git\\CoffeeReno\\CoffeeReno\\CoffeeReno\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\hungh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\minhd\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,11 +30,14 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "F:\\My projects\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj": {
-                "projectPath": "F:\\My projects\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj"
+              "C:\\Git\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj": {
+                "projectPath": "C:\\Git\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj"
               },
-              "F:\\My projects\\CoffeeReno\\CoffeeReno\\Services\\Services.csproj": {
-                "projectPath": "F:\\My projects\\CoffeeReno\\CoffeeReno\\Services\\Services.csproj"
+              "C:\\Git\\CoffeeReno\\CoffeeReno\\IoC\\IoC.csproj": {
+                "projectPath": "C:\\Git\\CoffeeReno\\CoffeeReno\\IoC\\IoC.csproj"
+              },
+              "C:\\Git\\CoffeeReno\\CoffeeReno\\Services\\Services.csproj": {
+                "projectPath": "C:\\Git\\CoffeeReno\\CoffeeReno\\Services\\Services.csproj"
               }
             }
           }
@@ -86,20 +89,20 @@
         }
       }
     },
-    "F:\\My projects\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj": {
+    "C:\\Git\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\My projects\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Git\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "F:\\My projects\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\hungh\\.nuget\\packages\\",
-        "outputPath": "F:\\My projects\\CoffeeReno\\CoffeeReno\\Data\\obj\\",
+        "projectPath": "C:\\Git\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\minhd\\.nuget\\packages\\",
+        "outputPath": "C:\\Git\\CoffeeReno\\CoffeeReno\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\hungh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\minhd\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -156,20 +159,20 @@
         }
       }
     },
-    "F:\\My projects\\CoffeeReno\\CoffeeReno\\Services\\Services.csproj": {
+    "C:\\Git\\CoffeeReno\\CoffeeReno\\IoC\\IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\My projects\\CoffeeReno\\CoffeeReno\\Services\\Services.csproj",
-        "projectName": "Services",
-        "projectPath": "F:\\My projects\\CoffeeReno\\CoffeeReno\\Services\\Services.csproj",
-        "packagesPath": "C:\\Users\\hungh\\.nuget\\packages\\",
-        "outputPath": "F:\\My projects\\CoffeeReno\\CoffeeReno\\Services\\obj\\",
+        "projectUniqueName": "C:\\Git\\CoffeeReno\\CoffeeReno\\IoC\\IoC.csproj",
+        "projectName": "IoC",
+        "projectPath": "C:\\Git\\CoffeeReno\\CoffeeReno\\IoC\\IoC.csproj",
+        "packagesPath": "C:\\Users\\minhd\\.nuget\\packages\\",
+        "outputPath": "C:\\Git\\CoffeeReno\\CoffeeReno\\IoC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\hungh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\minhd\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -182,8 +185,67 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "F:\\My projects\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj": {
-                "projectPath": "F:\\My projects\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj"
+              "C:\\Git\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj": {
+                "projectPath": "C:\\Git\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj"
+              },
+              "C:\\Git\\CoffeeReno\\CoffeeReno\\Services\\Services.csproj": {
+                "projectPath": "C:\\Git\\CoffeeReno\\CoffeeReno\\Services\\Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Git\\CoffeeReno\\CoffeeReno\\Services\\Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Git\\CoffeeReno\\CoffeeReno\\Services\\Services.csproj",
+        "projectName": "Services",
+        "projectPath": "C:\\Git\\CoffeeReno\\CoffeeReno\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\minhd\\.nuget\\packages\\",
+        "outputPath": "C:\\Git\\CoffeeReno\\CoffeeReno\\Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\minhd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Git\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj": {
+                "projectPath": "C:\\Git\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj"
               }
             }
           }

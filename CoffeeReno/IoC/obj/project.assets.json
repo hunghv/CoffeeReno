@@ -3300,23 +3300,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hungh\\.nuget\\packages\\": {},
+    "C:\\Users\\minhd\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\My projects\\CoffeeReno\\CoffeeReno\\IoC\\IoC.csproj",
+      "projectUniqueName": "C:\\Git\\CoffeeReno\\CoffeeReno\\IoC\\IoC.csproj",
       "projectName": "IoC",
-      "projectPath": "F:\\My projects\\CoffeeReno\\CoffeeReno\\IoC\\IoC.csproj",
-      "packagesPath": "C:\\Users\\hungh\\.nuget\\packages\\",
-      "outputPath": "F:\\My projects\\CoffeeReno\\CoffeeReno\\IoC\\obj\\",
+      "projectPath": "C:\\Git\\CoffeeReno\\CoffeeReno\\IoC\\IoC.csproj",
+      "packagesPath": "C:\\Users\\minhd\\.nuget\\packages\\",
+      "outputPath": "C:\\Git\\CoffeeReno\\CoffeeReno\\IoC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\hungh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\minhd\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3329,11 +3329,11 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "F:\\My projects\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj": {
-              "projectPath": "F:\\My projects\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj"
+            "C:\\Git\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj": {
+              "projectPath": "C:\\Git\\CoffeeReno\\CoffeeReno\\Data\\Data.csproj"
             },
-            "F:\\My projects\\CoffeeReno\\CoffeeReno\\Services\\Services.csproj": {
-              "projectPath": "F:\\My projects\\CoffeeReno\\CoffeeReno\\Services\\Services.csproj"
+            "C:\\Git\\CoffeeReno\\CoffeeReno\\Services\\Services.csproj": {
+              "projectPath": "C:\\Git\\CoffeeReno\\CoffeeReno\\Services\\Services.csproj"
             }
           }
         }
