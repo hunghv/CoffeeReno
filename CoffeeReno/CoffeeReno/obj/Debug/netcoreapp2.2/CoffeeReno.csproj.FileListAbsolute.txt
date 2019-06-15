@@ -84,3 +84,8 @@ C:\Git\CoffeeReno\CoffeeReno\CoffeeReno\obj\Debug\netcoreapp2.2\Razor\Views\AdsF
 C:\Git\CoffeeReno\CoffeeReno\CoffeeReno\obj\Debug\netcoreapp2.2\Razor\Views\AdsForms\Details.g.cshtml.cs
 C:\Git\CoffeeReno\CoffeeReno\CoffeeReno\obj\Debug\netcoreapp2.2\Razor\Views\AdsForms\Edit.g.cshtml.cs
 C:\Git\CoffeeReno\CoffeeReno\CoffeeReno\obj\Debug\netcoreapp2.2\Razor\Views\AdsForms\Index.g.cshtml.cs
+C:\Git\CoffeeReno\CoffeeReno\CoffeeReno\obj\Debug\netcoreapp2.2\Razor\Views\Providers\Create.g.cshtml.cs
+C:\Git\CoffeeReno\CoffeeReno\CoffeeReno\obj\Debug\netcoreapp2.2\Razor\Views\Providers\Delete.g.cshtml.cs
+C:\Git\CoffeeReno\CoffeeReno\CoffeeReno\obj\Debug\netcoreapp2.2\Razor\Views\Providers\Details.g.cshtml.cs
+C:\Git\CoffeeReno\CoffeeReno\CoffeeReno\obj\Debug\netcoreapp2.2\Razor\Views\Providers\Edit.g.cshtml.cs
+C:\Git\CoffeeReno\CoffeeReno\CoffeeReno\obj\Debug\netcoreapp2.2\Razor\Views\Providers\Index.g.cshtml.cs

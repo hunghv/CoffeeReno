@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Data.Migrations
 {
-    public partial class restoreentity : Migration
+    public partial class updateentitiesv2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -30,26 +30,6 @@ namespace Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Image",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    IsDeleted = table.Column<bool>(nullable: false),
-                    CreatedDate = table.Column<DateTime>(nullable: false),
-                    CreatedBy = table.Column<int>(nullable: false),
-                    ModifiedDate = table.Column<DateTime>(nullable: true),
-                    ModifiedBy = table.Column<int>(nullable: true),
-                    DeletedDate = table.Column<DateTime>(nullable: true),
-                    DeletedBy = table.Column<int>(nullable: true),
-                    ImageUrl = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Image", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "PostType",
                 columns: table => new
                 {
@@ -68,6 +48,27 @@ namespace Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_PostType", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Provider",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    IsDeleted = table.Column<bool>(nullable: false),
+                    CreatedDate = table.Column<DateTime>(nullable: false),
+                    CreatedBy = table.Column<int>(nullable: false),
+                    ModifiedDate = table.Column<DateTime>(nullable: true),
+                    ModifiedBy = table.Column<int>(nullable: true),
+                    DeletedDate = table.Column<DateTime>(nullable: true),
+                    DeletedBy = table.Column<int>(nullable: true),
+                    Name = table.Column<string>(maxLength: 50, nullable: true),
+                    Description = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Provider", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -226,6 +227,7 @@ namespace Data.Migrations
                     PostTypeId = table.Column<int>(nullable: false),
                     UserProfileId = table.Column<int>(nullable: false),
                     AdsFormId = table.Column<int>(nullable: false),
+                    ProviderId = table.Column<int>(nullable: false),
                     Title = table.Column<string>(maxLength: 100, nullable: true),
                     Price = table.Column<float>(nullable: false),
                     PriceDescription = table.Column<string>(maxLength: 50, nullable: true),
@@ -249,6 +251,12 @@ namespace Data.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
+                        name: "FK_Post_Provider_ProviderId",
+                        column: x => x.ProviderId,
+                        principalTable: "Provider",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_Post_UserProfile_UserProfileId",
                         column: x => x.UserProfileId,
                         principalTable: "UserProfile",
@@ -257,7 +265,7 @@ namespace Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PostImage",
+                name: "Image",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -269,20 +277,14 @@ namespace Data.Migrations
                     ModifiedBy = table.Column<int>(nullable: true),
                     DeletedDate = table.Column<DateTime>(nullable: true),
                     DeletedBy = table.Column<int>(nullable: true),
-                    ImageId = table.Column<int>(nullable: false),
+                    ImageUrl = table.Column<string>(nullable: true),
                     PostId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PostImage", x => x.Id);
+                    table.PrimaryKey("PK_Image", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_PostImage_Image_ImageId",
-                        column: x => x.ImageId,
-                        principalTable: "Image",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_PostImage_Post_PostId",
+                        name: "FK_Image_Post_PostId",
                         column: x => x.PostId,
                         principalTable: "Post",
                         principalColumn: "Id",
@@ -295,6 +297,11 @@ namespace Data.Migrations
                 column: "AdsTypeId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Image_PostId",
+                table: "Image",
+                column: "PostId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Post_AdsFormId",
                 table: "Post",
                 column: "AdsFormId");
@@ -305,19 +312,14 @@ namespace Data.Migrations
                 column: "PostTypeId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Post_ProviderId",
+                table: "Post",
+                column: "ProviderId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Post_UserProfileId",
                 table: "Post",
                 column: "UserProfileId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PostImage_ImageId",
-                table: "PostImage",
-                column: "ImageId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PostImage_PostId",
-                table: "PostImage",
-                column: "PostId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserLoginHistory_UserId",
@@ -338,16 +340,13 @@ namespace Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "PostImage");
+                name: "Image");
 
             migrationBuilder.DropTable(
                 name: "UserLoginHistory");
 
             migrationBuilder.DropTable(
                 name: "UserRole");
-
-            migrationBuilder.DropTable(
-                name: "Image");
 
             migrationBuilder.DropTable(
                 name: "Post");
@@ -360,6 +359,9 @@ namespace Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "PostType");
+
+            migrationBuilder.DropTable(
+                name: "Provider");
 
             migrationBuilder.DropTable(
                 name: "UserProfile");

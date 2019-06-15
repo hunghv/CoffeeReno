@@ -1,10 +1,10 @@
-﻿@model IEnumerable<Data.Entities.AdsType>
+﻿@model IEnumerable<Data.Entities.Provider>
 
 @{
-    ViewData["Title"] = "Manage Ads Types";
+    ViewData["Title"] = "Manage Providers";
 }
 
-<h1>Ads Types</h1>
+<h1>Providers</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -74,7 +74,7 @@
                     @Html.DisplayFor(modelItem => item.DeletedBy)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a><br />
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a><br/>
                     <a asp-action="Details" asp-route-id="@item.Id">Details</a><br />
                     <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                 </td>

@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(CoffeeRenoContext))]
-    [Migration("20190615071123_restore-entity")]
-    partial class restoreentity
+    [Migration("20190615151026_update-entities-v2")]
+    partial class updateentitiesv2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -104,7 +104,11 @@ namespace Data.Migrations
 
                     b.Property<DateTime?>("ModifiedDate");
 
+                    b.Property<int>("PostId");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("PostId");
 
                     b.ToTable("Image");
                 });
@@ -145,6 +149,8 @@ namespace Data.Migrations
                     b.Property<string>("Property2")
                         .HasMaxLength(50);
 
+                    b.Property<int>("ProviderId");
+
                     b.Property<string>("Title")
                         .HasMaxLength(100);
 
@@ -156,41 +162,11 @@ namespace Data.Migrations
 
                     b.HasIndex("PostTypeId");
 
+                    b.HasIndex("ProviderId");
+
                     b.HasIndex("UserProfileId");
 
                     b.ToTable("Post");
-                });
-
-            modelBuilder.Entity("Data.Entities.PostImage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("CreatedBy");
-
-                    b.Property<DateTime>("CreatedDate");
-
-                    b.Property<int?>("DeletedBy");
-
-                    b.Property<DateTime?>("DeletedDate");
-
-                    b.Property<int>("ImageId");
-
-                    b.Property<bool>("IsDeleted");
-
-                    b.Property<int?>("ModifiedBy");
-
-                    b.Property<DateTime?>("ModifiedDate");
-
-                    b.Property<int>("PostId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ImageId");
-
-                    b.HasIndex("PostId");
-
-                    b.ToTable("PostImage");
                 });
 
             modelBuilder.Entity("Data.Entities.PostType", b =>
@@ -221,6 +197,35 @@ namespace Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PostType");
+                });
+
+            modelBuilder.Entity("Data.Entities.Provider", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("CreatedBy");
+
+                    b.Property<DateTime>("CreatedDate");
+
+                    b.Property<int?>("DeletedBy");
+
+                    b.Property<DateTime?>("DeletedDate");
+
+                    b.Property<string>("Description");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<int?>("ModifiedBy");
+
+                    b.Property<DateTime?>("ModifiedDate");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(50);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Provider");
                 });
 
             modelBuilder.Entity("Data.Entities.Role", b =>
@@ -377,6 +382,14 @@ namespace Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("Data.Entities.Image", b =>
+                {
+                    b.HasOne("Data.Entities.Post", "Post")
+                        .WithMany("Images")
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("Data.Entities.Post", b =>
                 {
                     b.HasOne("Data.Entities.AdsForm", "AdsForm")
@@ -389,22 +402,14 @@ namespace Data.Migrations
                         .HasForeignKey("PostTypeId")
                         .OnDelete(DeleteBehavior.Cascade);
 
+                    b.HasOne("Data.Entities.Provider", "Provider")
+                        .WithMany("Posts")
+                        .HasForeignKey("ProviderId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("Data.Entities.UserProfile", "UserProfile")
                         .WithMany("Posts")
                         .HasForeignKey("UserProfileId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Data.Entities.PostImage", b =>
-                {
-                    b.HasOne("Data.Entities.Image", "Image")
-                        .WithMany("PostImages")
-                        .HasForeignKey("ImageId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Data.Entities.Post", "Post")
-                        .WithMany("PostImages")
-                        .HasForeignKey("PostId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
