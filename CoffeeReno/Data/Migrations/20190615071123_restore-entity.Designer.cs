@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(CoffeeRenoContext))]
-    [Migration("20190614135250_initial-create")]
-    partial class initialcreate
+    [Migration("20190615071123_restore-entity")]
+    partial class restoreentity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
