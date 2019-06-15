@@ -1,9 +1,12 @@
 ﻿using System;
 using AutoMapper;
 using Data.Context;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -19,10 +22,39 @@ namespace CoffeeReno.Configuration
     {
         public static void InitServices(IServiceCollection services, IConfiguration configuration)
         {
+            IninitAuth(services);
             InitAutoMapper(services);
             InitSwagger(services);
             InitMySQL(services, configuration);
+        }
 
+        private static void IninitAuth(IServiceCollection services)
+        {
+            services.AddAuthentication(options =>
+                {
+                    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                })
+                .AddFacebook(options =>
+                {
+                    options.AppId = "400769287316836";
+                    options.AppSecret = "896d529984a688a55b472eba65a967d2";
+                })
+                //.AddTwitter(options =>
+                //{
+                //    options.ConsumerKey = "";
+                //    options.ConsumerSecret = "";
+                //})
+                .AddGoogle(options =>
+                {
+                    options.ClientId = "996326863156-enla0cmr75m9i74p5ubstj2tqklpmh7a.apps.googleusercontent.com";
+                    options.ClientSecret = "Yuj_3Lq5KjJhgQ6tZ2UmuU52";
+                })
+                .AddCookie(options =>
+                {
+                    options.LoginPath = "/signin";
+                });
         }
 
         // ReSharper disable once InconsistentNaming
@@ -69,9 +101,14 @@ namespace CoffeeReno.Configuration
             {
                 app.UseHsts();
             }
+#pragma warning disable 618
+            app.UseIdentity();
+#pragma warning restore 618
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseAuthentication();
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

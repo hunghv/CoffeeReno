@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CoffeeReno.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Services.Interfaces;
-using Services.ViewModels.Request;
 
 namespace CoffeeReno.Controllers
 {
@@ -25,14 +22,20 @@ namespace CoffeeReno.Controllers
 
         #endregion
 
+        [Route("")]
         public async Task<IActionResult> Index()
         {
-            var a = await _adminServices.SaveBlog(new UserProfileModel
+            //    var a = await _adminServices.SaveBlog(new UserProfileModel
+            //    {
+            //        Name = "hunghv2"
+            //    });
+            var vm = new ProfileViewModel
             {
-                Name = "hunghv2"
-            });
+                Claims = User?.Claims,
+                Name = User?.Identity?.Name
+            };
 
-            return View();
+            return View(vm);
         }
 
         public IActionResult Privacy()
