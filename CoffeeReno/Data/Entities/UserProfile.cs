@@ -99,14 +99,24 @@ namespace Data.Entities
 
     public class Image : Entity
     {
-        public Image()
-        {
-            PostImages = new List<PostImage>();
-        }
-
         public string ImageUrl { get; set; }
 
-        public ICollection<PostImage> PostImages { get; set; }
+        public int PostId { get; set; }
+        public virtual Post Post { get; set; }
+    }
+
+    public class Provider : Entity
+    {
+        public Provider()
+        {
+            Posts = new List<Post>();
+        }
+
+        [MaxLength(50)]
+        public string Name { get; set; }
+        public string Description { get; set; }
+
+        public ICollection<Post> Posts { get; set; }
     }
 
     public class PostType : Entity
@@ -128,7 +138,7 @@ namespace Data.Entities
     {
         public Post()
         {
-            PostImages = new List<PostImage>();
+            Images = new List<Image>();
         }
 
         public int PostTypeId { get; set; }
@@ -137,6 +147,8 @@ namespace Data.Entities
         public virtual UserProfile UserProfile { get; set; }
         public int AdsFormId { get; set; }
         public virtual AdsForm AdsForm { get; set; }
+        public int ProviderId { get; set; }
+        public virtual Provider Provider { get; set; }
 
         [MaxLength(100)]
         public string Title { get; set; }
@@ -154,14 +166,6 @@ namespace Data.Entities
         public string Description { get; set; }
 
 
-        public ICollection<PostImage> PostImages { get; set; }
-    }
-
-    public class PostImage : Entity
-    {
-        public int ImageId { get; set; }
-        public virtual Image Image { get; set; }
-        public int PostId { get; set; }
-        public virtual Post Post { get; set; }
+        public ICollection<Image> Images { get; set; }
     }
 }

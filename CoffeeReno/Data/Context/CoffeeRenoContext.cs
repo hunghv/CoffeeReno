@@ -17,9 +17,9 @@ namespace Data.Context
         public DbSet<AdsType> AdsTypes { get; set; }
         public DbSet<AdsForm> AdsForms { get; set; }
         public DbSet<Image> Images { get; set; }
+        public DbSet<Provider> Providers { get; set; }
         public DbSet<PostType> PostTypes { get; set; }
         public DbSet<Post> Posts { get; set; }
-        public DbSet<PostImage> PostImages { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -32,9 +32,9 @@ namespace Data.Context
             modelBuilder.Entity<AdsType>().ToTable("AdsType");
             modelBuilder.Entity<AdsForm>().ToTable("AdsForm");
             modelBuilder.Entity<Image>().ToTable("Image");
+            modelBuilder.Entity<Provider>().ToTable("Provider");
             modelBuilder.Entity<PostType>().ToTable("PostType");
             modelBuilder.Entity<Post>().ToTable("Post");
-            modelBuilder.Entity<PostImage>().ToTable("PostImage");
         }
     }
 }
