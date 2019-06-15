@@ -1,6 +1,7 @@
 ﻿using Data.Context;
 using Data.Repository.Implementation;
 using Data.Repository.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Services.Interfaces;
 using Services.Services;
@@ -17,6 +18,9 @@ namespace IoC
             services.AddScoped(typeof(IRoleRepository), typeof(RoleRepository));
             services.AddScoped(typeof(IUserRoleRepository), typeof(UserRoleRepository));
             services.AddScoped(typeof(IAdminServices), typeof(AdminServices));
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
         }
     }
 }

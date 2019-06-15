@@ -1,38 +1,46 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CoffeeReno.Models;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Services.Interfaces;
 
 namespace CoffeeReno.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         #region Contructor, Fields
-
         private readonly IAdminServices _adminServices;
         private readonly ILogger _logger;
-        public HomeController(IAdminServices adminServices, ILogger<HomeController> logger)
+        private readonly ClaimsPrincipal _user;
+        public IList<AuthenticationScheme> ExternalLogins { get; set; }
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public HomeController(IAdminServices adminServices, ILogger<HomeController> logger, IHttpContextAccessor contextAccessor)
         {
             _adminServices = adminServices;
             _logger = logger;
+            _httpContextAccessor = contextAccessor;
         }
 
         #endregion
-
+        public IDictionary<string, string> AuthProperties { get; set; }
         [Route("")]
         public async Task<IActionResult> Index()
         {
-            //    var a = await _adminServices.SaveBlog(new UserProfileModel
-            //    {
-            //        Name = "hunghv2"
-            //    });
+            var authResult = await HttpContext.AuthenticateAsync();
+
             var vm = new ProfileViewModel
             {
-                Claims = User?.Claims,
-                Name = User?.Identity?.Name
+                Claims = authResult.Principal.Claims,
+                Name = authResult.Principal.Identity?.Name
             };
 
             return View(vm);
