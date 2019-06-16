@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using CoffeeReno.Common;
 using Microsoft.AspNetCore.Mvc;
 using CoffeeReno.Models;
 using Microsoft.AspNetCore.Authentication;
@@ -15,7 +16,7 @@ using Services.Interfaces;
 namespace CoffeeReno.Controllers
 {
     [AllowAnonymous]
-    public class HomeController : Controller
+    public class HomeController : CoffeeRenoControllerBase
     {
         #region Contructor, Fields
         private readonly IAdminServices _adminServices;

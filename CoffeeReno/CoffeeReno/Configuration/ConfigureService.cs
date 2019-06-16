@@ -66,7 +66,6 @@ namespace CoffeeReno.Configuration
                     options.Events = new OAuthEvents
                     {
                         OnCreatingTicket = context => {
-                            // Use the Facebook Graph Api to get the user's email address
                             var client = new FacebookClient(context.AccessToken);
                             dynamic info = client.Get("me", new { fields = "name, id, email, picture, gender, birthday, address, first_name, age_range" });
                             return Task.FromResult(0);
