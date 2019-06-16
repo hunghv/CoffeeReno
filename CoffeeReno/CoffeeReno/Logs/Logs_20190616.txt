@@ -1,0 +1,17 @@
+INFO  16-35-2019 20:35:10 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:44381/   
+INFO  16-35-2019 20:35:10 Microsoft.AspNetCore.Routing.EndpointMiddleware [6] - Executing endpoint 'CoffeeReno.Controllers.HomeController.Index (CoffeeReno)' 
+INFO  16-35-2019 20:35:10 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Route matched with {action = "Index", controller = "Home"}. Executing action CoffeeReno.Controllers.HomeController.Index (CoffeeReno) 
+INFO  16-35-2019 20:35:10 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [6] - Executing action method CoffeeReno.Controllers.HomeController.Index (CoffeeReno) - Validation state: Valid 
+INFO  16-35-2019 20:35:10 Microsoft.EntityFrameworkCore.Infrastructure [6] - Entity Framework Core 2.2.4-servicing-10062 initialized 'CoffeeRenoContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 0.0 MySql  
+INFO  16-35-2019 20:35:14 Microsoft.EntityFrameworkCore.Database.Command [12] - Executed DbCommand (314ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 50), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime), @p6='?' (Size = 255), @p7='?' (Size = 4000), @p8='?' (Size = 100), @p9='?' (DbType = Boolean), @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime), @p12='?' (Size = 50), @p13='?' (Size = 50), @p14='?' (DbType = Boolean), @p15='?' (Size = 30), @p16='?' (Size = 8000) (DbType = Binary), @p17='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `UserProfile` (`Active`, `ConfirmPassword`, `CreatedBy`, `CreatedDate`, `DeletedBy`, `DeletedDate`, `DisplayName`, `Domain`, `Email`, `IsDeleted`, `ModifiedBy`, `ModifiedDate`, `NickName`, `Password`, `ReceiveEmail`, `TelephoneNumber`, `ThumbnailPhoto`, `UserName`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);
+SELECT `Id`
+FROM `UserProfile`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID(); 
+INFO  16-35-2019 20:35:14 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [12] - Executed action method CoffeeReno.Controllers.HomeController.Index (CoffeeReno), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3913.6217ms. 
+INFO  16-35-2019 20:35:14 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [12] - Executing ViewResult, running view Index. 
+INFO  16-35-2019 20:35:14 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor [12] - Executed ViewResult - view Index executed in 257.7342ms. 
+INFO  16-35-2019 20:35:14 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [12] - Executed action CoffeeReno.Controllers.HomeController.Index (CoffeeReno) in 4578.4368ms 
+INFO  16-35-2019 20:35:14 Microsoft.AspNetCore.Routing.EndpointMiddleware [12] - Executed endpoint 'CoffeeReno.Controllers.HomeController.Index (CoffeeReno)' 
+INFO  16-35-2019 20:35:14 Microsoft.AspNetCore.Hosting.Internal.WebHost [12] - Request finished in 4735.2058ms 200 text/html; charset=utf-8 
