@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Data.Context;
 using Data.Entities;
 using System;
+using System.Collections.Generic;
 
 namespace CoffeeReno.Controllers
 {
@@ -78,6 +79,9 @@ namespace CoffeeReno.Controllers
             {
                 return NotFound();
             }
+
+            //support partial view _AdsFormPartial_Index.cshtml
+            adsType.AdsFroms = _context.AdsForms?.Where(x => x.AdsTypeId == id)?.ToList();
             return View(adsType);
         }
 

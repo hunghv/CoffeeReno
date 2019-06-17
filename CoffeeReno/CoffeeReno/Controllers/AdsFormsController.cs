@@ -71,6 +71,29 @@ namespace CoffeeReno.Controllers
             return View(adsForm);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> PartialCreate(int adsTypeId, [Bind("Name,Description,Id,CreatedBy")] AdsForm adsForm)
+        {
+            if (ModelState.IsValid)
+            {
+                adsForm.CreatedDate = DateTime.Now;
+                adsForm.AdsTypeId = adsTypeId;
+
+                _context.Add(adsForm);
+                await _context.SaveChangesAsync();
+                //return RedirectToAction(nameof(Index));
+
+                //return to Edit view in AdsTypesController with the same AdsType selected to be edited
+                return RedirectToAction("Edit", "AdsTypes", new { id = adsTypeId });
+            }
+            ViewData["AdsTypeId"] = new SelectList(_context.AdsTypes, "Id", "Name", adsForm.AdsTypeId);
+            //return View(adsForm);
+
+            //return to Edit view in AdsTypesController with the same AdsType selected to be edited
+            return RedirectToAction("Edit", "AdsTypes", new { id = adsTypeId });
+        }
+
         // GET: AdsForms/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {

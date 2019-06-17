@@ -6,9 +6,9 @@
 
 <h1>Ads Forms</h1>
 
-<p>
+@*<p>
     <a asp-action="Create">Create New</a>
-</p>
+</p>*@
 <table class="table">
     <thead>
         <tr>
@@ -80,9 +80,9 @@
                     @Html.DisplayFor(modelItem => item.DeletedBy)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a><br />
+                    @*<a asp-action="Edit" asp-route-id="@item.Id">Edit</a><br />
                     <a asp-action="Details" asp-route-id="@item.Id">Details</a><br />
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>*@
                 </td>
             </tr>
         }

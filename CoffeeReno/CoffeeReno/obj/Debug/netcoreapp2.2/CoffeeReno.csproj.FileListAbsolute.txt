@@ -89,3 +89,7 @@ C:\Git\CoffeeReno\CoffeeReno\CoffeeReno\obj\Debug\netcoreapp2.2\Razor\Views\Prov
 C:\Git\CoffeeReno\CoffeeReno\CoffeeReno\obj\Debug\netcoreapp2.2\Razor\Views\Providers\Details.g.cshtml.cs
 C:\Git\CoffeeReno\CoffeeReno\CoffeeReno\obj\Debug\netcoreapp2.2\Razor\Views\Providers\Edit.g.cshtml.cs
 C:\Git\CoffeeReno\CoffeeReno\CoffeeReno\obj\Debug\netcoreapp2.2\Razor\Views\Providers\Index.g.cshtml.cs
+C:\Git\CoffeeReno\CoffeeReno\CoffeeReno\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_NavBarPartial.g.cshtml.cs
+C:\Git\CoffeeReno\CoffeeReno\CoffeeReno\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_FooterPartial.g.cshtml.cs
+C:\Git\CoffeeReno\CoffeeReno\CoffeeReno\obj\Debug\netcoreapp2.2\Razor\Views\AdsForms\_AdsFormPartial_Create.g.cshtml.cs
+C:\Git\CoffeeReno\CoffeeReno\CoffeeReno\obj\Debug\netcoreapp2.2\Razor\Views\AdsForms\_AdsFormPartial_Index.g.cshtml.cs

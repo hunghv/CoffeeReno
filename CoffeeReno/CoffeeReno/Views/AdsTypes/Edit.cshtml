@@ -5,69 +5,86 @@
 }
 
 <h1>Edit</h1>
-
-<h4>AdsType</h4>
 <hr />
+
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+    <div class="col-md-12 col-lg-4">
+        <div class="card">
+            <div class="card-header text-center">
+                <strong>Ads Type</strong> to be edited
             </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
+            <div class="card-body">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label"></label>
+                        <input asp-for="Description" class="form-control" />
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <input type="hidden" asp-for="Id" />
+                    <div class="form-group">
+                        <label asp-for="CreatedDate" class="control-label"></label>
+                        <input asp-for="CreatedDate" class="form-control" disabled />
+                        @Html.HiddenFor(model => model.CreatedDate)
+                        <span asp-validation-for="CreatedDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CreatedBy" class="control-label"></label>
+                        <input asp-for="CreatedBy" class="form-control" disabled />
+                        @Html.HiddenFor(model => model.CreatedBy)
+                        <span asp-validation-for="CreatedBy" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ModifiedDate" class="control-label"></label>
+                        <input asp-for="ModifiedDate" class="form-control" disabled />
+                        @Html.HiddenFor(model => model.ModifiedDate)
+                        <span asp-validation-for="ModifiedDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ModifiedBy" class="control-label"></label>
+                        <input asp-for="ModifiedBy" class="form-control" disabled />
+                        @Html.HiddenFor(model => model.ModifiedBy)
+                        <span asp-validation-for="ModifiedBy" class="text-danger"></span>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="IsDeleted" /> @Html.DisplayNameFor(model => model.IsDeleted)
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DeletedDate" class="control-label"></label>
+                        <input asp-for="DeletedDate" class="form-control" disabled />
+                        @Html.HiddenFor(model => model.DeletedDate)
+                        <span asp-validation-for="DeletedDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DeletedBy" class="control-label"></label>
+                        <input asp-for="DeletedBy" class="form-control" disabled />
+                        @Html.HiddenFor(model => model.DeletedBy)
+                        <span asp-validation-for="DeletedBy" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-success" /> | <a asp-action="Index">Back to List</a>
+                    </div>
+                </form>
             </div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="CreatedDate" class="control-label"></label>
-                <input asp-for="CreatedDate" class="form-control" disabled />
-                @Html.HiddenFor(model => model.CreatedDate)
-                <span asp-validation-for="CreatedDate" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-6">
+        <div class="card">
+            <div class="card-header text-center">
+                All <strong>Ads Forms</strong> belong to this <strong>Ads Type</strong>
             </div>
-            <div class="form-group">
-                <label asp-for="CreatedBy" class="control-label"></label>
-                <input asp-for="CreatedBy" class="form-control" disabled />
-                @Html.HiddenFor(model => model.CreatedBy)
-                <span asp-validation-for="CreatedBy" class="text-danger"></span>
+            <div class="card-body">
+                @{await Html.RenderPartialAsync("~/Views/AdsForms/_AdsFormPartial_Index.cshtml", ViewData.Model.AdsFroms, new ViewDataDictionary(this.ViewData) { { "EditingAdsTypeId", ViewData.Model.Id } });}
+                @*@{await Html.RenderPartialAsync("~/Views/AdsForms/_AdsFormPartial_Index.cshtml", ViewData.Model.AdsFroms);}*@
             </div>
-            <div class="form-group">
-                <label asp-for="ModifiedDate" class="control-label"></label>
-                <input asp-for="ModifiedDate" class="form-control" disabled />
-                @Html.HiddenFor(model => model.ModifiedDate)
-                <span asp-validation-for="ModifiedDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ModifiedBy" class="control-label"></label>
-                <input asp-for="ModifiedBy" class="form-control" disabled />
-                @Html.HiddenFor(model => model.ModifiedBy)
-                <span asp-validation-for="ModifiedBy" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="IsDeleted" /> @Html.DisplayNameFor(model => model.IsDeleted)
-                </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="DeletedDate" class="control-label"></label>
-                <input asp-for="DeletedDate" class="form-control" disabled />
-                @Html.HiddenFor(model => model.DeletedDate)
-                <span asp-validation-for="DeletedDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DeletedBy" class="control-label"></label>
-                <input asp-for="DeletedBy" class="form-control" disabled />
-                @Html.HiddenFor(model => model.DeletedBy)
-                <span asp-validation-for="DeletedBy" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-success" /> | <a asp-action="Index">Back to List</a>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
