@@ -8,7 +8,7 @@ pipeline {
     }
     stage('build') {
       steps {
-        build(job: 'hunghv2', quietPeriod: 1, wait: true)
+        build(job: 'CoffeeReno', quietPeriod: 1, wait: true)
       }
     }
     stage('sleeps') {
